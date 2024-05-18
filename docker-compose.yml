@@ -1,0 +1,14 @@
+services:
+  date:
+    image: nadson88/result-date
+    build:
+      dockerfile: date.dockerfile
+  result:
+    image: nadson88/result
+    build: .
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    depends_on:
+      - date
