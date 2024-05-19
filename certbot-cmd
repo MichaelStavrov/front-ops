@@ -1,0 +1,6 @@
+docker compose run --rm --entrypoint "\
+certbot certonly --webroot -w /var/www/certbot \
+--email mihali5@mail.ru
+-d result-test-app.ru
+--agree-tos
+--force-renewal" certbot
